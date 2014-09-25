@@ -1,0 +1,14 @@
+(export
+ call-with-input-string
+ call-with-output-string
+ with-input-port
+ with-output-port
+ with-error-port
+ with-input-from-port
+ with-output-to-port
+ with-error-to-port
+ with-error-to-file
+ with-input-from-string
+ with-output-to-string
+ with-error-to-string
+ )
