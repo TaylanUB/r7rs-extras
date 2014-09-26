@@ -5,4 +5,6 @@
   (include-library-declarations "io.exports.scm")
   (import (r7rs-extras partition))
   (include-library-declarations "partition.exports.scm")
+  (import (r7rs-extras arithmetic))
+  (include-library-declarations "arithmetic.exports.scm")
   )

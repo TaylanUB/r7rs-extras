@@ -86,3 +86,45 @@ unspecified in which one of the matching lists they appear.
 - `(partition+ list . procs)`: This is like the `partition*`
 procedure, but elements matching multiple procedures appear in every
 corresponding list.
+
+
+arithmetic
+----------
+
+`(r7rs-extras arithmetic)`
+
+- `(euclidean/ x y)`: Return `q` and `r` in `x = q*y + r` where `0 <=
+  r < |y|`.
+
+- `(euclidean-quotient x y)`: Return `q` in `x = q*y + r` where `0 <=
+  R < |y|`.
+
+- `(euclidean-remainder x y)`: Return `r` in `x = q*y + r` where `0 <=
+  r < |y|`.
+
+- `(ceiling/ x y)`: Return `q` and `r` in `x = q*y + r` where `q =
+  ceiling(x/y)`.
+
+- `(ceiling-quotient x y)`: Return `q` in `x = q*y + r` where `q =
+  ceiling(x/y)`.
+
+- `(ceiling-remainder x y)`: Return `r` in `x = q*y + r` where `q =
+  ceiling(x/y)`.
+
+- `(centered/ x y)`: Return `q` and `r` in `x = q*y + r` where `-|y/2|
+  <= r < |y/2|`.
+
+- `(centered-quotient x y)`: Return `q` in `x = q*y + r` where `-|y/2|
+  <= r < |y/2|`.
+
+- `(centered-remainder x y)`: Return `r` in `x = q*y + r` where
+  `-|y/2| <= r < |y/2|`.
+
+- `(round/ x y)`: Return `q` and `r` in `x = q*y + r` where `q =
+  round(x/y)`.
+
+- `(round-quotient x y)`: Return `q` in `x = q*y + r` where `q =
+  round(x/y)`.
+
+- `(round-remainder x y)`: Return `r` in `x = q*y + r` where `q =
+  round(x/y)`.
