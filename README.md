@@ -70,3 +70,19 @@ higher-order
 
 - `(and=> value proc)`: If `value` is true, call `proc` on it, else
   return false.
+
+
+partition
+---------
+
+`(r7rs-extras partition)`
+
+- `(partition* list . procs)`: Partitions `list` via `procs`,
+returning `procs + 1` many lists; the last list containing elements
+that didn't match any procedure.  The ordering of each list obeys that
+of `list`.  If there are elements matching multiple `procs`, it's
+unspecified in which one of the matching lists they appear.
+
+- `(partition+ list . procs)`: This is like the `partition*`
+procedure, but elements matching multiple procedures appear in every
+corresponding list.

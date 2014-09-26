@@ -3,4 +3,6 @@
   (include-library-declarations "higher-order.exports.scm")
   (import (r7rs-extras io))
   (include-library-declarations "io.exports.scm")
+  (import (r7rs-extras partition))
+  (include-library-declarations "partition.exports.scm")
   )
