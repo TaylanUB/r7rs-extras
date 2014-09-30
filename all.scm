@@ -7,4 +7,6 @@
   (include-library-declarations "partition.exports.scm")
   (import (r7rs-extras arithmetic))
   (include-library-declarations "arithmetic.exports.scm")
+  (import (r7rs-extras pushpop))
+  (include-library-declarations "pushpop.exports.scm")
   )

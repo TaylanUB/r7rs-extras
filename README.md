@@ -128,3 +128,14 @@ arithmetic
 
 - `(round-remainder x y)`: Return `r` in `x = q*y + r` where `q =
   round(x/y)`.
+
+
+push! and pop!
+--------------
+
+`(r7rs-extras pushpop)`
+
+- `(push! pair value)`: `(set! pair (cons value pair))`
+
+- `(pop! pair)`: `(let ((value (car pair))) (set! pair (cdr pair))
+  value)`
