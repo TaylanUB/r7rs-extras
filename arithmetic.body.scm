@@ -60,7 +60,7 @@
         ((negative? y)
          (ceiling (/ x y)))
         ((zero? y)
-         (error "Division by zero."))
+         (error "division by zero"))
         (else +nan.0)))
 
 (define-divisions
@@ -86,7 +86,7 @@
         ((negative? y)
          (ceiling (+ -1/2 (/ x y))))
         ((zero? y)
-         (error "Division by zero."))
+         (error "division by zero"))
         (else +nan.0)))
 
 (define-divisions
