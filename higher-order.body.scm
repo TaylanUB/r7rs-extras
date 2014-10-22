@@ -49,10 +49,12 @@
 (define (pipeline proc . rest)
   "Reverse functional composition; e.g. ((compose x y) a) = (y (x a))."
   (lambda x
-    (apply (if (null? rest)
-               values
-               (apply pipeline rest))
-           x)))
+    (call-with-values
+        (lambda ()
+          (apply proc x))
+      (if (null? rest)
+          values
+          (apply pipeline rest)))))
 
 (define (identity . x)
   "Returns values given to it as-is."
