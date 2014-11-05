@@ -83,7 +83,7 @@
 
 (define (with-input-from-string string thunk)
   "Calls THUNK with `current-input-port' bound to a port fed with STRING."
-  (with-input-port (open-string-port string) thunk))
+  (with-input-port (open-input-string string) thunk))
 
 (define (with-output-to-string thunk)
   "Calls THUNK with `current-output-port' bound to a port feeding a string which
