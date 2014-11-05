@@ -1,7 +1,7 @@
 r7rs-extras
 ===========
 
-*Augmentations to the R7RS `(scheme base)` library.*
+*Augmentations to R7RS-small standard libraries.*
 
 Import `(r7rs-extras all)` to get all of the following.
 
