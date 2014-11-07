@@ -27,13 +27,11 @@
 
 (define (const value)
   "Make a nullary procedure always returning VALUE."
-  (lambda ()
-    value))
+  (lambda () value))
 
 (define (negate proc)
   "Make a procedure negating the application of PROC to its arguments."
-  (lambda x
-    (not (apply proc x))))
+  (lambda x (not (apply proc x))))
 
 (define (compose proc . rest)
   "Functional composition; e.g. ((compose x y) a) = (x (y a))."
@@ -57,8 +55,6 @@
 
 (define (and=> value proc)
   "If VALUE is true, call PROC on it, else return false."
-  (if value
-      (proc value)
-      value))
+  (if value (proc value) value))
 
 ;;; higher-order.body.scm ends here
