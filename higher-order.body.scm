@@ -47,7 +47,7 @@
             (apply proc y))))))
 
 (define (pipeline proc . rest)
-  "Reverse functional composition; e.g. ((compose x y) a) = (y (x a))."
+  "Reverse functional composition; e.g. ((pipeline x y) a) = (y (x a))."
   (lambda x
     (call-with-values
         (lambda ()
