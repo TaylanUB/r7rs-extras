@@ -78,7 +78,7 @@
     (thunk)))
 
 (define (with-error-to-file file thunk)
-  "Calls THUNK with a `current-error-port' bound to FILE."
+  "Calls THUNK with `current-error-port' bound to FILE."
   (with-error-port (open-output-file file) thunk))
 
 (define (with-input-from-string string thunk)

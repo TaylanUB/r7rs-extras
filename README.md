@@ -35,7 +35,7 @@ I/O
 - `(with-error-to-port port thunk)`: Calls `thunk` with `port` as the
   `current-error-port`.  Doesn't close `port`.
 
-- `(with-error-to-file file thunk)`: Calls `thunk` with a
+- `(with-error-to-file file thunk)`: Calls `thunk` with
   `current-error-port` bound to `file`.
 
 - `(with-input-from-string string thunk)`: Calls `thunk` with
@@ -64,7 +64,7 @@ higher-order
   y) a)` = `(x (y a))`.
 
 - `(pipeline proc . rest)`: Reverse functional composition;
-  e.g. `((compose x y) a)` = `(y (x a))`.
+  e.g. `((pipeline x y) a)` = `(y (x a))`.
 
 - `(identity . x)`: Returns values given to it as-is.
 
