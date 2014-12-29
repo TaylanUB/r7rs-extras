@@ -1,5 +1,5 @@
 (define-library (r7rs-extras io)
   (import (scheme base)
           (scheme file))
-  (include-library-declarations "io.exports.scm")
+  (include-library-declarations "io.exports.sld")
   (include "io.body.scm"))
