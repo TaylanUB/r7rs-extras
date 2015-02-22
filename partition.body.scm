@@ -1,8 +1,9 @@
 ;;; partition.body.scm --- Variable-arity partition procedures
 
-;; Copyright (C) 2014  Taylan Ulrich Bayirli/Kammer
+;; Copyright © 2014  Taylan Ulrich Bayırlı/Kammer
+;; Copyright © 2015  Taylan Ulrich Bayırlı/Kammer
 
-;; Author: Taylan Ulrich Bayirli/Kammer <taylanbayirli@gmail.com>
+;; Author: Taylan Ulrich Bayırlı/Kammer <taylanbayirli@gmail.com>
 ;; Keywords: extensions lists partition partitioning
 
 ;; This program is free software; you can redistribute it and/or modify
