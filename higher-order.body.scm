@@ -35,19 +35,21 @@
 
 (define (compose proc . rest)
   "Functional composition; e.g. ((compose x y) a) = (x (y a))."
-  (if (null? rest) proc
+  (if (null? rest)
+      proc
       (let ((rest-proc (apply compose rest)))
         (lambda x
-          (call-with-values (lambda () (apply rest-proc x))
-            (lambda y (apply proc y)))))))
+          (let-values ((x (apply rest-proc x)))
+            (apply proc x))))))
 
 (define (pipeline proc . rest)
   "Reverse functional composition; e.g. ((pipeline x y) a) = (y (x a))."
-  (if (null? rest) proc
+  (if (null? rest)
+      proc
       (let ((rest-proc (apply pipeline rest)))
         (lambda x
-          (call-with-values (lambda () (apply proc x))
-            (lambda y (apply rest-proc y)))))))
+          (let-values ((x (apply proc x)))
+            (apply rest-proc x))))))
 
 (define (identity . x)
   "Returns values given to it as-is."
